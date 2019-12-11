@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "openocd",
+            "cwd": "${workspaceRoot}",
+            "executable": "./build/firmware.elf",
+            "name": "STM32 OpenOCD",
+            "runToMain": true,
+            "preLaunchTask": "build",
+            "preLaunchCommands": [],
+            "postLaunchCommands": [],
+            "device": "STM32F030F4",
+            "svdFile": "STM32F030.svd",
+            "configFiles": [
+                "interface/stlink-v2.cfg",
+                "target/stm32f0x.cfg"
+            ],
+            "showDevDebugOutput": false,
+            "internalConsoleOptions": "openOnSessionStart",
+        }
+    ]
+}
